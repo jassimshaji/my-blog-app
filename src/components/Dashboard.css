@@ -1,0 +1,35 @@
+/* Dashboard.css */
+
+.dashboard {
+    padding: 20px;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap cards in a new row */
+    gap: 20px;
+    /* Space between cards */
+}
+
+.post-card {
+    width: 100%;
+    /* Full width in small screens */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    /* Add a smooth transition */
+    background-color: #f9f9f9;
+    /* Light gray background */
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    /* Lift card slightly on hover */
+}
+
+.post-card h3,
+.post-card h4 {
+    margin: 0;
+}
