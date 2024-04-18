@@ -1,48 +1,45 @@
 /* BlogForm.css */
-
-.blog-form {
+form {
+    background-color: white;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-.blog-form h2 {
-    margin-bottom: 20px;
+form div {
+    margin-bottom: 15px;
 }
 
-.blog-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+label {
+    font-weight: bold;
 }
 
-.blog-form input,
-.blog-form textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
+    border-radius: 4px;
+    transition: border-color 0.3s;
 }
 
-.blog-form input:focus,
-.blog-form textarea:focus {
-    border-color: #007bff;
-    /* Change border color on focus */
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
 }
 
-.blog-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    /* Blue button background */
+button {
+    background-color: var(--primary-color);
     color: white;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.blog-form button:hover {
-    background-color: #0056b3;
-    /* Darker blue on hover */
+button:hover {
+    background-color: var(--secondary-color);
 }

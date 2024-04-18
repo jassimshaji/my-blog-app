@@ -1,35 +1,40 @@
 /* Dashboard.css */
-
 .dashboard {
     padding: 20px;
 }
 
-.posts {
-    display: flex;
-    flex-wrap: wrap;
-    /* Wrap cards in a new row */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    /* Space between cards */
 }
 
-.post-card {
-    width: 100%;
-    /* Full width in small screens */
-    padding: 10px;
-    border: 1px solid #ddd;
+.blog-card {
+    background-color: white;
     border-radius: 10px;
-    transition: transform 0.3s ease;
-    /* Add a smooth transition */
-    background-color: #f9f9f9;
-    /* Light gray background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.post-card:hover {
+.blog-card:hover {
     transform: translateY(-5px);
-    /* Lift card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.post-card h3,
-.post-card h4 {
+.blog-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.blog-card p {
     margin: 0;
+    font-size: 0.9rem;
 }

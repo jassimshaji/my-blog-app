@@ -1,25 +1,28 @@
-import React, { useState } from "react";
 import "./BlogForm.css";
+import React, { useState } from "react";
 
 function BlogForm() {
     const [blogName, setBlogName] = useState("");
     const [description, setDescription] = useState("");
     const [authorName, setAuthorName] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Blog Name:", blogName);
-        console.log("Description:", description);
-        console.log("Author Name:", authorName);
-        // You can add code here to handle form submission
-        // such as sending data to an API
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Perform form submission logic here (e.g., POST to an API endpoint)
+        console.log("Form submitted with values:", {
+            blogName,
+            description,
+            authorName,
+        });
+
+        // Reset the form fields
         setBlogName("");
         setDescription("");
         setAuthorName("");
     };
 
     return (
-        <div className="blog-form">
+        <div>
             <h2>Add Blog</h2>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -37,7 +40,7 @@ function BlogForm() {
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                         required
-                    />
+                    ></textarea>
                 </div>
                 <div>
                     <label>Author Name:</label>

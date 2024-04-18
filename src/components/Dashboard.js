@@ -1,33 +1,28 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
 
 function Dashboard() {
-    const [posts, setPosts] = useState([]);
+    const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        async function fetchData() {
-            try {
-                const response = await axios.get(
-                    "https://jsonplaceholder.typicode.com/posts"
-                );
-                setPosts(response.data);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        }
-
-        fetchData();
+        // Fetch the initial list of blogs from the API
+        fetch("https://jsonplaceholder.typicode.com/posts")
+            .then(response => response.json())
+            .then(data => {
+                // Set only a limited number of blogs for simplicity
+                setBlogs(data.slice(0, 10));
+            })
+            .catch(error => console.error("Error fetching blogs:", error));
     }, []);
 
     return (
         <div className="dashboard">
-            <h2>Blog Dashboard</h2>
-            <div className="posts">
-                {posts.slice(0, 10).map((post) => (
-                    <div key={post.id} className="post-card">
-                        <h3>ID: {post.id}</h3>
-                        <h4>Title: {post.title}</h4>
+            <h1>Blog Dashboard</h1>
+            <div className="blog-list">
+                {blogs.map((blog) => (
+                    <div key={blog.id} className="blog-card">
+                        <h3>{blog.title}</h3>
+                        <p>{blog.body}</p>
                     </div>
                 ))}
             </div>
@@ -36,3 +31,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
