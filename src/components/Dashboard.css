@@ -1,6 +1,15 @@
-/* Dashboard.css */
+/* Dashboard background image */
 .dashboard {
-    padding: 20px;
+    background-image: url('./@spectrumshift.jpeg');
+    /* Replace with the URL of your image */
+    background-size: cover;
+    /* Ensures the background image covers the entire element */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    height: 100vh;
+    /* Sets the height of the dashboard container to full viewport height */
 }
 
 h1 {
@@ -16,6 +25,7 @@ h1 {
 }
 
 .blog-card {
+    background-image: url('./d1846920e907fef37690d1a9909ad583.jpg');
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

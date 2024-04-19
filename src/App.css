@@ -20,3 +20,90 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+
+/* Style for navbar links */
+.navbar-nav .nav-link {
+  color: black;
+  /* Default text color */
+  transition: transform 0.3s ease;
+  /* Smooth transition for transform */
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+  transform: scale(1.1);
+  /* Scale the link up to 110% of its original size */
+}
+
+/* Navbar realistic gradient background */
+/* Style for navbar with a light gradient and transparent background */
+.navbar {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(200, 200, 200, 0.6));
+  /* Light gradient with transparency */
+  backdrop-filter: blur(5px);
+  /* Optional: Apply a blur effect to enhance the background appearance */
+}
+/* Style for navbar links */
+.navbar-nav .nav-link {
+  font-weight: bold;
+  /* Make the links bold */
+  color: rgba(0, 0, 0, 0.7);
+  /* Set text color to black with 70% opacity (transparency) */
+  padding: 0.5rem 1rem;
+  /* Add padding for spacing around the text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition for background color and color change */
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+  /* Semi-transparent black background on hover */
+  color: rgba(0, 0, 0, 0.5);
+  /* Make text fully opaque black on hover */
+}
+
+/* Style for the Blog Dashboard heading */
+.blog-dashboard-heading {
+  font-family: 'Cursive', sans-serif;
+  /* Use a fancy font family, such as cursive */
+  font-size: 2.5rem;
+  /* Set a larger font size */
+  color: #1ed7d7;
+  /* Set a custom color (blue in this case) */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* Add a subtle shadow effect */
+  margin-bottom: 1rem;
+  /* Add margin below the heading */
+}
+/* Container for the video background */
+.video-background-container {
+  position: fixed;
+  /* Position the video background container fixed in place */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* Cover the full width of the viewport */
+  height: 100vh;
+  /* Cover the full height of the viewport */
+  z-index: -1;
+  /* Layer the video background below other content */
+  overflow: hidden;
+  /* Hide any overflow */
+}
+
+/* Style for the background video */
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure the video covers the entire container */
+}
+
+/* Style for the main application container */
+.App {
+  position: relative;
+  /* Allow other content to be positioned in front */
+  z-index: 1;
+  /* Ensure content layers above the video */
+}

@@ -17,7 +17,7 @@ function Dashboard() {
 
     return (
         <div className="dashboard">
-            <h1>Blog Dashboard</h1>
+            <h1 className="blog-dashboard-heading">Blog Dashboard</h1>
             <div className="blog-list">
                 {blogs.map((blog) => (
                     <div key={blog.id} className="blog-card">
