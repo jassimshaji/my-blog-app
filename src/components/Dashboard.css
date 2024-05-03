@@ -1,6 +1,10 @@
 /* Dashboard background image */
 .dashboard {
-    background-image: url('./@spectrumshift.jpeg');
+    padding: 20px;
+    width: 100%;
+        /* Set the desired width of the container */
+        max-width: 1200px;
+    background-color: rgb(0, 0, 0);
     /* Replace with the URL of your image */
     background-size: cover;
     /* Ensures the background image covers the entire element */
@@ -15,7 +19,7 @@
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: rgb(255, 255, 255);
 }
 
 .blog-list {
@@ -25,11 +29,12 @@ h1 {
 }
 
 .blog-card {
-    background-image: url('./d1846920e907fef37690d1a9909ad583.jpg');
-    background-color: white;
+    margin: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 

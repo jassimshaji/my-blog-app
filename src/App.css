@@ -1,6 +1,6 @@
 /* App.css */
 :root {
-  --primary-color: #3498db;
+  --primary-color: #000000;
   --secondary-color: #2ecc71;
   --background-color: #f5f5f5;
   --text-color: #333;
@@ -38,7 +38,7 @@ body {
 /* Navbar realistic gradient background */
 /* Style for navbar with a light gradient and transparent background */
 .navbar {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(200, 200, 200, 0.6));
+  background: linear-gradient(to right, rgba(90, 87, 87, 0.6), rgba(0, 0, 0, 0.6));
   /* Light gradient with transparency */
   backdrop-filter: blur(5px);
   /* Optional: Apply a blur effect to enhance the background appearance */
@@ -65,16 +65,21 @@ body {
 
 /* Style for the Blog Dashboard heading */
 .blog-dashboard-heading {
+  text-align: center;
   font-family: 'Cursive', sans-serif;
   /* Use a fancy font family, such as cursive */
   font-size: 2.5rem;
   /* Set a larger font size */
-  color: #1ed7d7;
+  color: #ffffff;
   /* Set a custom color (blue in this case) */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   /* Add a subtle shadow effect */
   margin-bottom: 1rem;
   /* Add margin below the heading */
+      font-size: 2rem;
+        /* Optional: Adjust font size as needed */
+        font-weight: bold;
+        /* Increase the thickness of the text */
 }
 /* Container for the video background */
 .video-background-container {
